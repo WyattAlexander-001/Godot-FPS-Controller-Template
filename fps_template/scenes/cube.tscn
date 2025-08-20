@@ -1,8 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://dx0bu27g6fufw"]
+[gd_scene load_steps=4 format=3 uid="uid://dx0bu27g6fufw"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5rbgv"]
 albedo_color = Color(0.195313, 1, 0, 1)
 
+[sub_resource type="BoxMesh" id="BoxMesh_5rbgv"]
+
+[sub_resource type="BoxOccluder3D" id="BoxOccluder3D_5rbgv"]
+size = Vector3(1.11412, 1.1827, 1.20696)
+
 [node name="CSGBox3D" type="CSGBox3D"]
 use_collision = true
 material = SubResource("StandardMaterial3D_5rbgv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, -0.00901592, 0, 0)
+mesh = SubResource("BoxMesh_5rbgv")
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
+occluder = SubResource("BoxOccluder3D_5rbgv")

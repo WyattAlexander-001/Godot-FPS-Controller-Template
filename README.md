@@ -6,3 +6,15 @@ This template comes with levels to test the controller, well documented code, an
 
 <img src="git_images/first_stage.png" alt="First Level" width="500"/>
 
+Adding Occulusion Culling to the controller:
+
+[Link To Tutorial](https://www.youtube.com/watch?v=VBiBZBVxu1s)
+
+# Cheap And Dirty Occulusion Culling
+* Go to project settings and have advanced settings toggled on
+* Go to occulsion culling and check the box
+* Add an occulderInstance3D to the scene
+
+# In This Repo We Made A Custom Occulusion Culling Solution
+* Simply add an occulder to your object in a primitive shape and add it like a collider
+
